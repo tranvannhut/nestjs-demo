@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  db-mysql-nestjs:
+    image: mysql:5.7.40
+    container_name: db-mysql-nestjs
+    restart: always
+    environment:
+      - MYSQL_DATABASE=nestjs_mysql_project
+      - MYSQL_ROOT_PASSWORD=747767
+    networks:
+      - nestjs-network
+    ports:
+      - '3308:3306'
+networks:
+  nestjs-network:
+
+  #docker compose down
+  #docker compose up -d db-mysql-nestjs -d
+  #docker exec -it db-mysql-nestjs bash
+  #npm install -D  prisma
+  #npx prisma init
+  #npx prisma migrate dev
+  #npx prisma studio
+
+  #connect mysql with command line : mysql -u root -p -h 127.0.0.1 => enter pass
+  # USE database_name; USE nestjs_mysql_project
+#how to remove container and volume
+# docker compose rm db-mysql-nestjs --stop --force --volumn
+
