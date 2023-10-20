@@ -17,4 +17,5 @@ async function bootstrap() {
 
   await app.listen(3456);
 }
+//CORS, REDIS
 bootstrap();
